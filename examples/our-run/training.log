@@ -1,0 +1,54 @@
+Loading pretrained model
+
+Fetching 9 files:   0%|          | 0/9 [00:00<?, ?it/s]
+Fetching 9 files: 100%|██████████| 9/9 [00:00<00:00, 3358.13it/s]
+Loading datasets
+Training
+╭─ mlx_lm.lora ────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+│    model           mlx-community/Qwen2.5-1.5B-Instruct-4bit                                                          │
+│    type            lora · 16 layers · rank 8                                                                         │
+│    dataset         work/data                                                                                         │
+│    optimizer       adam · lr 1.0e-05                                                                                 │
+│    batch · iters   4 · 60                                                                                            │
+│    max seq         1,024                                                                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+Trainable parameters: 0.342% (5.276M/1543.714M)
+  iter   train_loss     tok/s     tokens
+     1    val 3.178    7.94s
+    10    val 1.215    7.36s
+    10    1.763 ▼       26      2.0k
+  save  0000010_adapters.safetensors
+    20    val 1.057    6.78s
+    20    0.917 ▼       30      4.0k
+  save  0000020_adapters.safetensors
+    30    val 1.018    5.37s
+    30    0.619 ▼       32      5.9k
+  save  0000030_adapters.safetensors
+    40    val 1.168    5.61s
+    40    0.331 ▼       33      7.9k
+  save  0000040_adapters.safetensors
+    50    val 1.107    5.63s
+    50    0.275 ▼       36      9.9k
+  save  0000050_adapters.safetensors
+    60    val 1.385    6.04s
+    60    0.141 ▼       34     11.9k
+  save  0000060_adapters.safetensors
+train ██████████████████████████████ 100% ·    60/60
+      431.56 real        11.95 user        20.08 sys
+          1178484736  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              121266  page reclaims
+                 306  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                  22  messages sent
+                  57  messages received
+                   0  signals received
+                1152  voluntary context switches
+              107465  involuntary context switches
+        103045326634  instructions retired
+         58048786129  cycles elapsed
+          4979935536  peak memory footprint

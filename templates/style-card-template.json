@@ -1,0 +1,11 @@
+{
+  "_help": "Delete the keys you do not need. Only keep rules that at least 90 percent of your own replies follow.",
+  "name": "My voice",
+  "starts_with_regex": "^Hi (there|[A-Z][a-z]+),",
+  "ends_with": "Your exact sign off line",
+  "max_words": 80,
+  "max_sentences_in_body": 4,
+  "max_exclamations": 1,
+  "banned_characters": ["\u2014", "\u2013"],
+  "banned_phrases": ["As an AI", "I apologize for any inconvenience"]
+}

@@ -1,0 +1,23 @@
+name: tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  standard-library-tests:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Run the tests (standard library only, no MLX needed)
+        run: python -m unittest discover -s tests -v
+      - name: Check the sample data builds
+        run: |
+          python tools/build_dataset.py --csv data/sample_customer_replies.csv --system-file data/FACT-SHEET.txt --valid 8 --test 10 --out work/data
+          python tools/check_data.py work/data

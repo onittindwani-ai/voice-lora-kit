@@ -1,0 +1,11 @@
+{
+  "name": "Bluebird Bakery, Maya's voice (a made up example)",
+  "starts_with_regex": "^Hi (there|[A-Z][a-z]+),",
+  "ends_with": "Crumbs and kindness, Maya at Bluebird Bakery",
+  "max_words": 60,
+  "max_sentences_in_body": 3,
+  "max_exclamations": 1,
+  "banned_characters": ["\u2014", "\u2013"],
+  "unknown_reply_regex": "(?i)(let me (check|ask)|i.ll (check|ask)|check and come back|check with the baker)",
+  "banned_phrases": ["As an AI", "I apologize for any inconvenience", "Dear customer"]
+}
